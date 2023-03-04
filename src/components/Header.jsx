@@ -9,6 +9,7 @@ import {useSelector} from "react-redux";
 const Title = () => (
   <a href="/">
     <img
+      data-testid ="logo"
       className="h-20 w-25 rounded-lg shadow-xl shadow-slate-400"
       alt="logo"
       src={Logo}
@@ -29,7 +30,7 @@ const Header = () => {
           <li><Link className="m-2 p-2 text-2xl font-bold text-white bg-black shadow-xl shadow-slate-400" to="/about">About</Link></li>
           <li><Link className="m-2 p-2 text-2xl font-bold text-white bg-black shadow-xl shadow-slate-400" to="/contact">Contact</Link></li>
           <li><Link className="m-2 p-2 text-2xl font-bold text-white bg-black shadow-xl shadow-slate-400" to="/instamart">Instamart</Link></li>
-          <li><Link className="m-2 p-2 text-2xl font-bold text-white bg-black shadow-xl shadow-slate-400" to="/cart">Cart - {cartItems.length}</Link></li>
+          <li><Link data-testid="cart" className="m-2 p-2 text-2xl font-bold text-white bg-black shadow-xl shadow-slate-400" to="/cart">Cart - {cartItems.length}</Link></li>
         </ul>
       </div>
       {/* <h3 className="m-3 text-red-600 font-bold">{user.name}</h3> */}

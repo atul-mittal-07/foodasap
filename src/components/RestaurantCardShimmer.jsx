@@ -2,7 +2,7 @@ const RestaurantCardShimmer = () => {
   const arr = new Array(16);
   return (
     <>
-      <div className="restaurant-list">
+      <div data-testid = "shimmer-ui" className="restaurant-list">
         {
           arr.fill("").map((a, index) => {
             return (

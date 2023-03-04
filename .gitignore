@@ -3,3 +3,4 @@ node_modules/
 .parcel_cache/
 *.log
 .DS_Store
+coverage/

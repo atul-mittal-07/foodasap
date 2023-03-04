@@ -16,6 +16,7 @@ const Body = () => {
   return allRestaurants?.length > 0 ? (
     <>
       <input
+        data-testid ="input"
         className="border border-red-800 ml-[40%] mr-[40%] w-[20%] h-8 text-center shadow-xl shadow-slate-500"
         type="text"
         placeholder="Search"
@@ -42,8 +43,8 @@ const Body = () => {
           email: e.target.value
         })} />
       {
-        filteredRestaurants?.length === 0 ? (<h1>Sorry No Restaurant Found</h1>) : (
-          <div className="flex flex-wrap mt-10">
+        filteredRestaurants?.length === 0 ? (<h1 data-testid="no-res-found">Sorry No Restaurant Found</h1>) : (
+          <div data-testid="res-list" className="flex flex-wrap mt-10">
             {filteredRestaurants?.map((restaurant) => {
               return <Link key={restaurant?.data?.data?.id} to={"/restaurants/" + restaurant?.data?.data?.id}><RestaurantCard {...restaurant?.data?.data} /></Link>;
             })}

@@ -19,7 +19,7 @@ const RestaurantCard = ({
           cloudinaryImageId
         }
       />
-      <h2 className="font-semibold text-xl">{name}</h2><h2>{avgRating}⭐️</h2>
+      <h2 data-testid="res-name" className="font-semibold text-xl">{name}</h2><h2>{avgRating}⭐️</h2>
       <h3>{cuisines.join(", ")}</h3>
       <h4>{lastMileTravelString}</h4>
       <h5 className="font-bold">{costForTwoString}</h5>
